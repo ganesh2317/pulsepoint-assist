@@ -123,10 +123,7 @@ const Index = () => {
   };
 
   return (
-    <div className="w-full h-screen relative overflow-hidden" style={{ background: "#0a0a0f" }}>
-      {/* Scanline overlay */}
-      <div className="scanline-overlay" />
-
+    <div className="w-full h-screen relative overflow-hidden bg-background">
       {/* Emergency mode effects */}
       {isEmergencyMode && (
         <>
@@ -134,7 +131,6 @@ const Index = () => {
             specialization={detectedSpecialization || "Emergency"}
             hospitalName={selectedHospital?.name}
           />
-          <div className="emergency-edge-glow" />
         </>
       )}
 
